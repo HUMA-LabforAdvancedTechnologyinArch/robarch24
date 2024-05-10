@@ -1,0 +1,49 @@
+Connect real sense camera to the Linux machine. Connect the Linux machine, Windows machine and the UR Robot to the hub.
+Before each launch, go to robarch workspace and always bash.
+
+	cd ~/robarch_ws
+	source devel/setup.bash
+
+If ros master is run on the Linux machine, make sure to launch the rosbridge and the tf2_web_republisher.
+
+	roscore
+
+	roslaunch rosbridge_server rosbridge_websocket.launch 
+
+	rosrun tf2_web_republisher tf2_web_republisher
+
+	roslaunch file_server file_server.launch
+
+Launch the robot.
+
+	roslaunch ur_robot_driver ur10e_bringup.launch robot_ip:=192.168.0.210 kinematics_config:=/home/YOUR_USERNAME/robarch_ws/my_robot_calibration.yaml
+
+Launch the moveit.
+
+	roslaunch ur10e_mobilecart_liftkit_600mm_moveit_config move_group.launch
+
+Open rviz.
+
+	roslaunch ur10e_mobilecart_liftkit_600mm_moveit_config moveit_rviz.launch 
+
+Launch the calibration between camera and tool0.
+
+	roslaunch tf_frames_republisher publish_frame.launch
+
+Launch the camera.
+
+	roslaunch realsense2_camera rs_rgbd.launch
+
+	or 
+	
+	roslaunch realsense2_camera rs_camera.launch align_depth:=true depth_width:=640 depth_height:=480 depth_fps:=30 color_width:=640 color_height:=480 color_fps:=30 align_depth:=true
+
+Launch the aruco detector.
+
+	roslaunch easy_aruco track_aruco_marker.launch camera_namespace:=/camera/color dictionary:=DICT_7X7_250  marker_size:=0.07 reference_frame:=camera_color_optical_frame camera_frame:=camera_color_optical_frame
+
+Get aruco pose related to robot base.
+
+	rosrun tf tf_echo /base /marker_0
+
+

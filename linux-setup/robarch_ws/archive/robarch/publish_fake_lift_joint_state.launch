@@ -1,0 +1,4 @@
+  <launch>
+    <node pkg="robarch" type="fake_lift_joint_state_publisher.py"
+          name="fake_lift_joint_state_publisher" />
+  </launch>
