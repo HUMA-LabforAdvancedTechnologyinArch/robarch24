@@ -10,7 +10,20 @@ If ros master is run on the Linux machine, make sure to launch the rosbridge and
 
 	roslaunch rosbridge_server rosbridge_websocket.launch 
 
+	If "[rosbridge_websocket.launch] is neither a launch file in package [rosbridge_server] nor is [rosbridge_server] a launch file name" then:
+	
+		sudo apt-get install ros-melodic-rosbridge-suite
+		
+		Re-source ROS and then try launching rosbridge_websocket.launch
+
+
 	rosrun tf2_web_republisher tf2_web_republisher
+
+	If "Error: package "tf2_web_republisher" not found" then:
+	
+		sudo apt update
+		sudo apt install ros-melodic-tf2-web-republisher
+		rosrun tf2_web_republisher tf2_web_republisher
 
 	roslaunch file_server file_server.launch
 
@@ -41,6 +54,18 @@ Launch the camera.
 Launch the aruco detector.
 
 	roslaunch easy_aruco track_aruco_marker.launch camera_namespace:=/camera/color dictionary:=DICT_7X7_250  marker_size:=0.07 reference_frame:=camera_color_optical_frame camera_frame:=camera_color_optical_frame
+
+	If "package easy_aruco not found" then:
+		
+		pip install --user fpdf opencv-contrib-python
+		git clone https://github.com/marcoesposito1988/easy_aruco
+		cd ..
+		rosdep install -yir --from-paths src
+		cd ~/robarch_ws
+		catkin build 
+		source devel/setup.bash
+		
+		and try again
 
 Get aruco pose related to robot base.
 
