@@ -15,6 +15,15 @@ Build the src files.
 	
 	catkin build
 
+if the build fails with the following message "Could not find a package configuration file provided by ddynamic_reconfigure ..." then:
+
+	sudo apt-get update
+	sudo apt-get install ros-melodic-ddynamic-configure
+
+if the build fails with the following message " Could not find a package configuration file provided by "realsense2" (requested version 2.50.0) with .." then:
+
+	sudo apt-get install ros-$ROS_DISTRO-realsense2-camera
+
 Install real sense rgbd launch. If an error raises, go to https://github.com/IntelRealSense/realsense-ros/tree/ros1-legacy.
 
 	sudo apt install ros-melodic-rgbd-launch
