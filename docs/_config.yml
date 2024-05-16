@@ -1,0 +1,29 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+#relative_permalinks: true
+
+# Setup
+title:            Augmented Collaborative Robotics
+tagline:          'RobArch 2024'
+description:      'Workshop'
+baseurl: "/workshop_robarch_2024/" # the subpath of your site, e.g. /blog
+url: "https://le-ar-n.github.io/workshop_augmented_collaborative_robotics" # the base hostname & protocol for your site, e.g. http://example.com
+
+paginate:         5
+
+# Custom vars
+#version:          2.1.0
+
+github:
+  repo:           https://github.com/augmentedfabricationlab/workshop_robarch_2024
+
+plugins:
+  - jekyll-feed
+
+collections:
+  sessions:
+    output: true
