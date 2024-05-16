@@ -1,0 +1,20 @@
+<launch>
+    <arg name="robot_ip" default="192.168.0.200"/>
+    <arg name="kinematics_config" default="/root/my_robot_calibration.yaml"/>
+
+    <arg name="dictionary" default="DICT_7X7_250" />
+    <arg name="marker_size" default="0.07" />
+
+    <include file="$(dirname)/core.launch">
+    </include>
+    
+    <include file="$(dirname)/robot.launch">
+        <arg name="robot_ip" default="$(arg robot_ip)"/>
+        <arg name="kinematics_config" default="$(arg kinematics_config)"/>
+    </include>
+
+    <include file="$(dirname)/marker_tracking.launch">
+        <arg name="dictionary" default="$(arg dictionary)"/>
+        <arg name="marker_size" default="$(arg marker_size)" />
+    </include>
+</launch>

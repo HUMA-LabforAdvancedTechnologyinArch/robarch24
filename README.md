@@ -1,15 +1,32 @@
-# How to use this template
+# How to localize robots (on linux machine)
 
-1. Install required tools (see [here](#requirements))
-2. Click `Use this template` on Github (you need to be logged in to Github)
-3. Clone your new and shiny repo (eg. using `Github Desktop`)
-4. Prepare your environment to [get started](#getting-started)
-5. Delete this section of this document!
-6. Replace all `REPLACE_ME` placeholders
+```bash
+cd robarch_ws
+```
+```bash
+catkin build robarch_launcher
+```
+```bash
+source devel/setup.bash
+```
+```bash
+roslaunch robarch_launcher ur_marker_tracking.launcher
+```
 
-# REPLACE_ME: Title
+# How to plan robot motion (on linux machine)
 
-> REPLACE_ME: Enter here a one-liner saying what this code is or does, or will do!
+```bash
+cd robarch_ws
+```
+```bash
+catkin build robarch_launcher
+```
+```bash
+source devel/setup.bash
+```
+```bash
+roslaunch robarch_launcher ur_robot_fabrication.launcher
+```
 
 ## Requirements
 
@@ -18,29 +35,42 @@ Install the following tools:
 - [Anaconda](https://www.anaconda.com/products/individual)
 - [Visual Studio Code](https://code.visualstudio.com/) and extensions: [python](https://marketplace.visualstudio.com/items?itemName=ms-python.python), [pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance) and [editorconfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 - [Github Desktop](https://desktop.github.com/)
+- [Docker](https://docs.docker.com)
 
 ## Getting started
 
 Create a environment using `Anaconda prompt`:
 
-    cd FOLDER_OF_REPO
-    conda env create -n NAME_OR_TITLE -f environment.yml
+    (base) conda create -n robarch24 compas_fab compas_eve compas --yes
 
 Activate the environment:
 
-    conda activate NAME_OR_TITLE
-    python -m compas_rhino.install
+    (base) conda activate robarch24
 
-Open folder in Visual Studio Code:
+Install RTDE (requires python 3.10):
 
-    code .
+    (robarch24) pip install --user ur_rtde
 
-Select your environment from the lower left area in Visual Studio Code.
+Install Compas_XR:
 
+    (robarch24) git clone -b TrajectoryElementAttachmentfromConfig https://github.com/gramaziokohler/compas_xr.git
 
+Check installation:
+
+    (robarch24) pip show compas_fab
+    
+    Name: compas-fab
+    Version: 0.22.0
+    Summary: Robotic fabrication package for the COMPAS Framework
+    ...
+
+Install Rhino dependencies:
+
+    (robarch24) python -m compas_rhino.install -v 7.0
+
+    
 🚀 You're ready! 
 
-Start coding on `example.py` and explore the `example_grasshopper.ghx` file.
 
 ## Additional ideas
 
