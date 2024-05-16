@@ -2,11 +2,14 @@
 
 ```bash
 cd robarch_ws
-
+```
+```bash
 catkin build robarch_launcher
-
+```
+```bash
 source devel/setup.bash
-
+```
+```bash
 roslaunch robarch_launcher ur_robot_fabrication.launcher
 ```
 
