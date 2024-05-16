@@ -1,0 +1,24 @@
+controller_list:
+  - name: arm_joint_pos_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - wrist_3_joint
+      - wrist_2_joint
+      - wrist_1_joint
+      - elbow_joint
+      - shoulder_lift_joint
+      - shoulder_pan_joint
+  - name: full_joint_pos_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - shoulder_pan_joint
+      - shoulder_lift_joint
+      - elbow_joint
+      - wrist_1_joint
+      - wrist_2_joint
+      - wrist_3_joint
+      - liftkit_joint
