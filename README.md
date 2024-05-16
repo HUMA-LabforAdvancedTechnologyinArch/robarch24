@@ -10,7 +10,7 @@ catkin build robarch_launcher
 source devel/setup.bash
 ```
 ```bash
-roslaunch robarch_launcher ur_marker_tracking.launcher
+roslaunch robarch_launcher ur_marker_tracking.launch kinematics_config:=/home/YOUR_USERNAME/robarch_ws/my_robot_calibration.yaml
 ```
 
 # How to plan robot motion (on linux machine)
@@ -25,7 +25,7 @@ catkin build robarch_launcher
 source devel/setup.bash
 ```
 ```bash
-roslaunch robarch_launcher ur_robot_fabrication.launcher
+roslaunch robarch_launcher ur_robot_fabrication.launch
 ```
 
 ## Requirements
