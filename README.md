@@ -44,6 +44,7 @@ Install RTDE (requires python 3.10):
 Check installation:
 
     (robarch24) pip show compas_fab
+    
     Name: compas-fab
     Version: 0.22.0
     Summary: Robotic fabrication package for the COMPAS Framework
