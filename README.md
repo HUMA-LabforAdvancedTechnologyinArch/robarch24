@@ -1,5 +1,10 @@
 # How to localize robots (on linux machine)
 
+
+
+
+# How to plan robot motion (on linux machine)
+
 ```bash
 cd robarch_ws
 ```
@@ -12,16 +17,6 @@ source devel/setup.bash
 ```bash
 roslaunch robarch_launcher ur_robot_fabrication.launcher
 ```
-
-
-# How to plan robot motion (on linux machine)
-
-1. Install required tools (see [here](#requirements))
-2. Click `Use this template` on Github (you need to be logged in to Github)
-3. Clone your new and shiny repo (eg. using `Github Desktop`)
-4. Prepare your environment to [get started](#getting-started)
-5. Delete this section of this document!
-6. Replace all `REPLACE_ME` placeholders
 
 ## Requirements
 
