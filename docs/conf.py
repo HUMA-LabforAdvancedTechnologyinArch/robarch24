@@ -21,25 +21,25 @@ if os.getenv('SPELLCHECK'):
 
 source_suffix = '.rst'
 master_doc = 'index'
-project = 'workshop_robarch_2024'
-year = '2018'
-author = 'Gramazio Kohler Research'
+project = 'robarch24'
+year = '2024'
+author = 'Augmented Fabrication Lab'
 copyright = '{0}, {1}'.format(year, author)
 version = release = '0.1.0'
 
 pygments_style = 'trac'  # Perhaps change to sphinx
 templates_path = ['.']
 extlinks = {
-    'issue': ('https://github.com/augmentedfabricationlab/workshop_robarch_2024/issues/%s', '#'),
-    'pr': ('https://github.com/augmentedfabricationlab/workshop_robarch_2024/pull/%s', 'PR #'),
+    'issue': ('https://github.com/IntuitiveRobotics-AugmentedTechnologies/robarch24/issues/%s', '#'),
+    'pr': ('https://github.com/IntuitiveRobotics-AugmentedTechnologies/robarch24/pull/%s', 'PR #'),
 }
 # on_rtd is whether we are on readthedocs.org
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 html_theme = 'alabaster'
 html_theme_options = {
     'logo': 'logo.png',
-    'description': 'workshop_robarch_2024',
-    'github_user': 'augmentedfabricationlab',
+    'description': 'robarch24',
+    'github_user': 'IntuitiveRobotics-AugmentedTechnologies',
     'github_repo': project,
     'fixed_sidebar': True,
 }
