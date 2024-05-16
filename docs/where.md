@@ -4,6 +4,5 @@ title: Where
 ---
 
 
-
-[TUM Collaborative Construction Laboratory](https://portal.mytum.de/campus/roomfinder/roomfinder_viewmap?mapid=12&roomid=0710@0507)  
-Address: Arcisstraße 21, 80333 Munich
+[John H. Daniels Faculty of Architecture, Landscape and Design](https://www.daniels.utoronto.ca/about/one-spadina)
+Address: 1 Spadina Cres, Toronto, ON M5S 2J5, Canada
