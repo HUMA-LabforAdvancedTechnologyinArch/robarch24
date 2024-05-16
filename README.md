@@ -1,4 +1,4 @@
-# How to localize robots
+# How to localize robots (on linux machine)
 
 ```bash
 cd robarch_ws
@@ -14,7 +14,7 @@ roslaunch robarch_launcher ur_robot_fabrication.launcher
 ```
 
 
-# How to plan robot motion
+# How to plan robot motion (on linux machine)
 
 1. Install required tools (see [here](#requirements))
 2. Click `Use this template` on Github (you need to be logged in to Github)
