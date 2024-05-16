@@ -1,7 +1,17 @@
 # How to localize robots (on linux machine)
 
-
-
+```bash
+cd robarch_ws
+```
+```bash
+catkin build robarch_launcher
+```
+```bash
+source devel/setup.bash
+```
+```bash
+roslaunch robarch_launcher ur_marker_tracking.launcher
+```
 
 # How to plan robot motion (on linux machine)
 
@@ -40,6 +50,10 @@ Activate the environment:
 Install RTDE (requires python 3.10):
 
     (robarch24) pip install --user ur_rtde
+
+Install Compas_XR:
+
+    (robarch24) git clone -b TrajectoryElementAttachmentfromConfig https://github.com/gramaziokohler/compas_xr.git
 
 Check installation:
 
