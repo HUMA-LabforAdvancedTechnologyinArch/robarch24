@@ -1,4 +1,14 @@
-# How to use this template
+# How to localize robots
+
+```bash
+cd robarch_ws
+catkin build robarch_launcher
+source devel/setup.bash
+roslaunch robarch_launcher ur_robot_fabrication.launcher
+```
+
+
+# How to plan robot motion
 
 1. Install required tools (see [here](#requirements))
 2. Click `Use this template` on Github (you need to be logged in to Github)
@@ -6,10 +16,6 @@
 4. Prepare your environment to [get started](#getting-started)
 5. Delete this section of this document!
 6. Replace all `REPLACE_ME` placeholders
-
-# REPLACE_ME: Title
-
-> REPLACE_ME: Enter here a one-liner saying what this code is or does, or will do!
 
 ## Requirements
 
