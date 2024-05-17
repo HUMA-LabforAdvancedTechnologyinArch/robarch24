@@ -3,7 +3,8 @@ layout: page
 title: Workshop program
 ---
 
-**21.05.2024**
+**Day one: 21.05.2024**
+
 09:00–09:30 | **Welcome & introduction:** 
             | Workshop content presentation (Mitterberger & Doerfler)
             | Introduction of participants & hosts
@@ -24,7 +25,8 @@ title: Workshop program
             
 14:00-17:00 | **Assembly** 
  
-**22.05.2024**
+**Day two: 22.05.2024**
+
 09:00–13:00 | **Assembly** 
 
 13:00–14:00 | **Lunch**
@@ -32,7 +34,8 @@ title: Workshop program
             
 14:00-17:00 | **Assembly** 
 
-**23.05.2024**
+**Day three: 23.05.2024**
+
 09:00–13:00 | **Assembly** 
 
 13:00–14:00 | **Lunch**
