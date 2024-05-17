@@ -25,7 +25,7 @@ title: Workshop Program
 
 **13:00–14:00**  
 - **Lunch**
-- Lunch Talk 'Tie a Knot' (Mitterberger & Doerfler)
+    - Lunch Talk 'Tie a Knot' (Mitterberger & Doerfler)
 
 **14:00–17:00**  
 - **Assembly**
@@ -37,7 +37,7 @@ title: Workshop Program
 
 **13:00–14:00**  
 - **Lunch**
-- Lunch Talk 'Augmented Bricklaying' (Mitterberger & Doerfler)
+    - Lunch Talk 'Augmented Bricklaying' (Mitterberger & Doerfler)
 
 **14:00–17:00**  
 - **Assembly**
