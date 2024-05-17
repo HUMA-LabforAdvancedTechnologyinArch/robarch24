@@ -23,7 +23,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 project = 'robarch24'
 year = '2024'
-author = 'Augmented Fabrication Lab'
+author = 'Mitterberger & Doerfler'
 copyright = '{0}, {1}'.format(year, author)
 version = release = '0.1.0'
 
