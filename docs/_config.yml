@@ -7,7 +7,7 @@ permalink:        pretty
 #relative_permalinks: true
 
 # Setup
-title:            Augmented Collaborative Robotics
+title:            Collaborative Augmented Assembly: Task Distribution in Human-Robot Collaborative Assembly with Phone-based Augmented Reality
 tagline:          'RobArch 2024'
 description:      'Workshop'
 baseurl: "/robarch24/" # the subpath of your site, e.g. /blog
