@@ -1,0 +1,13 @@
+<launch>
+    <arg name="robot_ip" default="192.168.0.210"/>
+    <arg name="kinematics_config" default="/root/my_robot_calibration.yaml"/>
+
+    <include file="$(find ur_robot_driver)/launch/ur10e_bringup.launch">
+        <arg name="robot_ip" default="$(arg robot_ip)"/>
+        <arg name="kinematics_config" default="$(arg kinematics_config)"/>
+    </include>
+    
+    <include file="$(find ur10e_mobilecart_liftkit_600mm_moveit_config)/launch/move_group.launch">
+    </include>
+    
+</launch>

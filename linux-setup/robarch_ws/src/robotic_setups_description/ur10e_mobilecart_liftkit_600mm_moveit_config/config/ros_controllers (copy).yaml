@@ -1,0 +1,21 @@
+arm_joint_pos_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - wrist_3_joint
+    - wrist_2_joint
+    - wrist_1_joint
+    - elbow_joint
+    - shoulder_lift_joint
+    - shoulder_pan_joint
+  
+full_joint_pos_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - shoulder_pan_joint
+    - shoulder_lift_joint
+    - elbow_joint
+    - wrist_1_joint
+    - wrist_2_joint
+    - wrist_3_joint
+    - liftkit_joint
+ 

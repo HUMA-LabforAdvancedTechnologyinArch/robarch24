@@ -1,0 +1,18 @@
+<launch>
+    <arg name="dictionary" default="DICT_7X7_250" />
+    <arg name="marker_size" default="0.07" />
+
+    <include file="$(find tf_frames_republisher)/publish_frame.launch">
+    </include>
+    
+    <include file="$(find realsense2_camera)/launch/rs_rgbd.launch">
+    </include>
+
+    <include file="$(find easy_aruco)/launch/track_aruco_marker.launch">
+        <arg name="camera_namespace" default="/camera/color" />
+        <arg name="dictionary" default="$(arg dictionary)"/>
+        <arg name="marker_size" default="$(arg marker_size)" />
+        <arg name="reference_frame" default="camera_color_optical_frame" />
+        <arg name="camera_frame" default="camera_color_optical_frame" />
+    </include>
+</launch>
