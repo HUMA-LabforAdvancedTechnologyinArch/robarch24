@@ -14,13 +14,19 @@ title: Program
 - **Introduction to Assembly Workflow & Demo:**  
   - Design tool presentation (Atanasova)
   - AR Interface presentation (Kenny & Alexi)
-  - Assembly workflow demo (in stations)
+  - Assembly workflow demo (Saral, Atanasova, Kenny, Alexi)
+  - Detailed explanation (in stations, in 3 groups, 15min. each)
     - Robot localisation (Saral)
-    - Robot motion planning (Alexi, Saral, Atanasova)
-    - Robot assembly (Atanasova)
-    - AR Assembly (Kenny, Alexi)
+    - Robot motion planning and assembly (Alexi, Atanasova)
+    - AR Assembly (Kenny)
 
-**11:00–13:00**  
+**11:00–11:30**  
+- **Group Forming**
+    - Group A: Localisation (Moving the robot, robot localisation, mobile phone localisation, quality control) (Saral)
+    - Group B: Robot motion planning and control (Atanasova, Alexi)
+    - Group C: AR assembly (Kenny, Alexi)
+
+**11:30–13:00**  
 - **Assembly Workflow Testing**
 
 **13:00–14:00**  
