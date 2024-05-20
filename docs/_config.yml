@@ -9,7 +9,7 @@ permalink:        pretty
 # Setup
 title:            Collaborative Augmented Assembly
 tagline:          'RobArch 2024'
-description:      'Workshop'
+description:      'RobArch 2024 Workshop'
 baseurl: "/robarch24/" # the subpath of your site, e.g. /blog
 url: "https://intuitiverobotics-augmentedtechnologies.github.io/robarch24/" # the base hostname & protocol for your site, e.g. http://example.com
 
