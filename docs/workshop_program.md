@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Workshop Program
+title: Program
 ---
 
 ### Day One: 21.05.2024
