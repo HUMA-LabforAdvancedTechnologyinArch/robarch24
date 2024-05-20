@@ -8,7 +8,6 @@ Human-in-the-loop design and fabrication chains have the potential to leverage m
 
 In this workshop, participants will learn about and engage in a cooperative and augmented human-robot design-to-assembly workflow, where humans and robots work in synergy; that is, by enabling the creation of a complex timber structure that would be unattainable through either's efforts alone. As such, participants will explore interactive human-in-the-loop computational design and fabrication workflows using phone-based augmented reality (AR). A holistic computational design approach will be demonstrated, where constraints such as structural stability, fabrication constraints, and human-robot task distribution are already considered in the design generation. This computational model is linked with an intuitive phone-based AR application enabling task distribution linking robotic and manual assembly. This AR interface informs and instructs humans on fabrication tasks and enables them to adjust and align robotic task distribution interactively. 
 
-</br>
 
 <figure>
   <img src="{{site.baseurl}}images/robarch24_01.jpg" alt="Human-Robot Cooperative Assembly of Spatial Structures." style="width:100%" class="center">
