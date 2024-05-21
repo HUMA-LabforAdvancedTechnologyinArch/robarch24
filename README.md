@@ -51,10 +51,6 @@ Install RTDE (requires python 3.10):
 
     (robarch24) pip install --user ur_rtde
 
-Install Compas_XR:
-
-    (robarch24) git clone -b TrajectoryElementAttachmentfromConfig https://github.com/gramaziokohler/compas_xr.git
-
 Check installation:
 
     (robarch24) pip show compas_fab
