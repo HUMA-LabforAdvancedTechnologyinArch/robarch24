@@ -326,7 +326,7 @@ def release_pick_and_place_stick_trajectories(exit_trajectory, move_to_pick_traj
     try:
 
         #Turn on io to release stick that is being held
-        set_digital_io(vaccum_io,True,ip=ip)
+        set_digital_io(vaccum_io,False,ip=ip)
         #sleep on position to give some time for release
         time.sleep(1.0)
 
@@ -346,7 +346,7 @@ def release_pick_and_place_stick_trajectories(exit_trajectory, move_to_pick_traj
 
         time.sleep(1.0)
         #Turn on io to release stick that is being held
-        set_digital_io(vaccum_io,False,ip=ip)
+        set_digital_io(vaccum_io,True,ip=ip)
 
         ur_c.setPayload(0.4,[0.0,0.0,0.1])
         #Send to reversed pick configs list
