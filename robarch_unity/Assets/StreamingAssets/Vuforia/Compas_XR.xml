@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="tracker_05" size="0.150000 0.150000" />
+    <ImageTarget name="tracker_04" size="0.150000 0.150000" />
+    <ImageTarget name="tracker_03" size="0.150000 0.150000" />
+    <ImageTarget name="tracker_02" size="0.150000 0.150000" />
+    <ImageTarget name="tracker_01" size="0.150000 0.150000" />
+    <ImageTarget name="tracker_00" size="0.150000 0.150000" />
+  </Tracking>
+</QCARConfig>

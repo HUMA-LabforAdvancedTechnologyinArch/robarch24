@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="QR29" size="0.150000 0.150000" />
+    <ImageTarget name="QR28" size="0.150000 0.150000" />
+    <ImageTarget name="QR27" size="0.150000 0.150000" />
+    <ImageTarget name="QR26" size="0.150000 0.150000" />
+    <ImageTarget name="QR25" size="0.150000 0.150000" />
+    <ImageTarget name="QR24" size="0.150000 0.150000" />
+    <ImageTarget name="QR23" size="0.150000 0.150000" />
+    <ImageTarget name="QR22" size="0.150000 0.150000" />
+    <ImageTarget name="QR21" size="0.150000 0.150000" />
+    <ImageTarget name="QR20" size="0.150000 0.150000" />
+    <ImageTarget name="QR19" size="0.150000 0.150000" />
+    <ImageTarget name="QR18" size="0.150000 0.150000" />
+    <ImageTarget name="QR17" size="0.150000 0.150000" />
+    <ImageTarget name="QR16" size="0.150000 0.150000" />
+    <ImageTarget name="QR15" size="0.150000 0.150000" />
+    <ImageTarget name="QR14" size="0.150000 0.150000" />
+    <ImageTarget name="QR13" size="0.150000 0.150000" />
+    <ImageTarget name="QR12" size="0.150000 0.150000" />
+    <ImageTarget name="QR11" size="0.150000 0.150000" />
+    <ImageTarget name="QR10" size="0.150000 0.150000" />
+    <ImageTarget name="QR9" size="0.150000 0.150000" />
+    <ImageTarget name="QR8" size="0.150000 0.150000" />
+    <ImageTarget name="QR7" size="0.150000 0.150000" />
+    <ImageTarget name="QR6" size="0.150000 0.150000" />
+    <ImageTarget name="QR5" size="0.150000 0.150000" />
+    <ImageTarget name="QR4" size="0.150000 0.150000" />
+    <ImageTarget name="QR3" size="0.150000 0.150000" />
+    <ImageTarget name="QR2" size="0.150000 0.150000" />
+    <ImageTarget name="QR1" size="0.150000 0.150000" />
+    <ImageTarget name="QR0" size="0.150000 0.150000" />
+  </Tracking>
+</QCARConfig>

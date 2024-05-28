@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="marker_14_7x7_56-59" size="0.150000 0.150000" />
+    <ImageTarget name="marker_24_7x7_96-99" size="0.150000 0.150000" />
+    <ImageTarget name="marker_23_7x7_92-95" size="0.150000 0.150000" />
+    <ImageTarget name="marker_22_7x7_88-91" size="0.150000 0.150000" />
+    <ImageTarget name="marker_21_7x7_84-87" size="0.150000 0.150000" />
+    <ImageTarget name="marker_20_7x7_80-83" size="0.150000 0.150000" />
+    <ImageTarget name="marker_19_7x7_76-79" size="0.150000 0.150000" />
+    <ImageTarget name="marker_18_7x7_72-75" size="0.150000 0.150000" />
+    <ImageTarget name="marker_17_7x7_68-71" size="0.150000 0.150000" />
+    <ImageTarget name="marker_16_7x7_64-67" size="0.150000 0.150000" />
+    <ImageTarget name="marker_15_7x7_60-63" size="0.150000 0.150000" />
+    <ImageTarget name="marker_13_7x7_52-55" size="0.150000 0.150000" />
+    <ImageTarget name="marker_12_7x7_48-51" size="0.150000 0.150000" />
+    <ImageTarget name="marker_11_7x7_44-47" size="0.150000 0.150000" />
+    <ImageTarget name="marker_10_7x7_40-43" size="0.150000 0.150000" />
+    <ImageTarget name="marker_9_7x7_36-39" size="0.150000 0.150000" />
+    <ImageTarget name="marker_8_7x7_32-35" size="0.150000 0.150000" />
+    <ImageTarget name="marker_7_7x7_28-31" size="0.150000 0.150000" />
+    <ImageTarget name="marker_6_7x7_24-27" size="0.150000 0.150000" />
+    <ImageTarget name="marker_5_7x7_20-23" size="0.150000 0.150000" />
+    <ImageTarget name="marker_4_7x7_16-19" size="0.150000 0.150000" />
+    <ImageTarget name="marker_3_7x7_12-15" size="0.150000 0.150000" />
+    <ImageTarget name="marker_2_7x7_8-11" size="0.150000 0.150000" />
+    <ImageTarget name="marker_1_7x7_4-7" size="0.150000 0.150000" />
+    <ImageTarget name="marker_0_7x7_0-3" size="0.150000 0.150000" />
+  </Tracking>
+</QCARConfig>
