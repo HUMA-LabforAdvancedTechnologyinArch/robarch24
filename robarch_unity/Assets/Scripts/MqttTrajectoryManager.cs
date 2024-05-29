@@ -193,7 +193,6 @@ namespace CompasXR.Robots
             }
         }
 
-        //TODO: Extended For RobArch2024 ////////////////////////////////////////////////////////////////////////
         public void SubscribeToCompasXRTopics()
         {
             /*
@@ -414,7 +413,6 @@ namespace CompasXR.Robots
                             serviceManager.CurrentTrajectory = getTrajectoryResultmessage.Trajectory;
                             serviceManager.currentService = ServiceManager.CurrentService.ApproveTrajectory;
 
-                            //TODO: Extended For RobArch2024
                             GameObject robotToConfigure = trajectoryVisualizer.ActiveRobot.FindObject("RobotZero");
 
                             trajectoryVisualizer.VisualizeRobotTrajectoryFromResultMessage(getTrajectoryResultmessage, 

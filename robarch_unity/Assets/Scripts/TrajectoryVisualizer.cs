@@ -62,7 +62,6 @@ namespace CompasXR.Robots
             BuiltInRobotsParent = GameObject.Find("RobotPrefabs");
             ActiveRobotObjects = GameObject.Find("ActiveRobotObjects");
 
-            //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
             Dictionary<string, float> initialConfigDict = new Dictionary<string, float>();
             initialConfigDict.Add("liftkit_joint", 0.050000000000000003f);
             initialConfigDict.Add("elbow_joint", 2.629f);
@@ -84,7 +83,6 @@ namespace CompasXR.Robots
             SetRobArchActiveRobotsOnStart(BuiltInRobotsParent, initialConfigDict, linkNamesStorageDict);
         }
 
-        //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
         private void SetRobArchActiveRobotsOnStart(GameObject BuiltInRobotsParent, Dictionary<string, float> initialConfigDict, Dictionary<string, string> linkNamesStorageDict)
         {
             /*
@@ -170,7 +168,6 @@ namespace CompasXR.Robots
             }
         }
 
-        //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
 
         ////////////////////////////////////////// Robot Object Management ////////////////////////////////////////////////////////
         public void InstantiateRobotTrajectoryFromJointsDict(GetTrajectoryResult result, List<Dictionary<string, float>> TrajectoryConfigs, Frame robotBaseFrame, string trajectoryID, GameObject robotToConfigure, Dictionary<string, string> URDFLinks, GameObject parentObject, bool visibility)
@@ -289,7 +286,6 @@ namespace CompasXR.Robots
 
         }
 
-        //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
         public void AttachStickObjectDirectlyToEndEffector(string stepID, string trajectoryParentName, string robotName, string endEffectorLinkName, int pickIndex, int trajectoryCount)
         {
             /*

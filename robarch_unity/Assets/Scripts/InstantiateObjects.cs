@@ -48,12 +48,10 @@ namespace CompasXR.Core
         public GameObject Elements;
         public GameObject ActiveUserObjects;
 
-        //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
         public GameObject Joints;
         public GameObject JointPrefab;
         public GameObject MirroredJointPrefab;
 
-        //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
 
 
         //Events
@@ -104,11 +102,9 @@ namespace CompasXR.Core
             QRMarkers = GameObject.Find("QRMarkers");
             ActiveUserObjects = GameObject.Find("ActiveUserObjects");
 
-            //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
             Joints = GameObject.Find("Joints");
             JointPrefab = GameObject.Find("JointObjects").FindObject("JointPrefab");
             MirroredJointPrefab = GameObject.Find("JointObjects").FindObject("MirroredJointPrefab");
-            //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
 
             //Find Initial Materials
             BuiltMaterial = GameObject.Find("Materials").FindObject("Built").GetComponentInChildren<Renderer>().material;
@@ -134,7 +130,6 @@ namespace CompasXR.Core
 
         }
 
-        //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
         public void placeJointsDict(Dictionary<string, Data.Joint> JointsDataDict)
         {
             /*
@@ -335,7 +330,6 @@ namespace CompasXR.Core
             jointObject.SetActive(isVisible);
         }
 
-        //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
         public void PlaceElementFromStep(string Key, Step step)
         {
             /*
@@ -363,9 +357,7 @@ namespace CompasXR.Core
             //Instantiate the object in the AR space
             GameObject elementPrefab = ObjectInstantiaion.InstantiateObjectFromRightHandFrameData(geometry_object, step.data.location.point, step.data.location.xaxis, step.data.location.yaxis, isObj, databaseManager.z_remapped);
 
-            //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
             StoreObjectLengthsPositionsOnInstantiation(Key, elementPrefab, ObjectLengthsDictionary);
-            //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
 
             elementPrefab.transform.SetParent(Elements.transform, false);
             elementPrefab.name = Key;
@@ -650,7 +642,6 @@ namespace CompasXR.Core
             UserIndicatorInstantiator(ref OtherUserIndacator, userObject, itemKey, UserInfoname, UserInfoname, 0.15f);
         }
 
-        //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
         public void StoreObjectLengthsPositionsOnInstantiation(string Key, GameObject gameObject, Dictionary<string, List<float>> ObjectLenthsDictionary)
         {
             /*
@@ -796,7 +787,6 @@ namespace CompasXR.Core
             P2Line.SetPosition(0, P2Position);
             P2Line.SetPosition(1, P2Adjusted);
 
-            //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
             UIFunctionalities.SetObjectLengthsTextFromStoredKey(key);
             // UIFunctionalities.SetObjectLengthsText(P1distance, P2distance);
         }
@@ -1291,10 +1281,8 @@ namespace CompasXR.Core
             {
                 ObjectInstantiaion.DestroyGameObjectByName(eventArgs.Key);
 
-                //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
                 FindandDeleteJointsFromDeletedStep(eventArgs.Key);
 
-                //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
                 //Remove Object Measurements from the deleted step
                 if(ObjectLengthsDictionary.ContainsKey(eventArgs.Key))
                 {
@@ -1305,7 +1293,6 @@ namespace CompasXR.Core
             {
                 InstantiateChangedKeys(eventArgs.NewValue, eventArgs.Key);
 
-                //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
                 ColorAllJointsByBuildState();
             }
 
@@ -1361,7 +1348,6 @@ namespace CompasXR.Core
             databaseManager.FindInitialElement();
         }
 
-        //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
         public void OnJointsInformationReceived(object source, JointsDataDictEventArgs e)
         {
             /*

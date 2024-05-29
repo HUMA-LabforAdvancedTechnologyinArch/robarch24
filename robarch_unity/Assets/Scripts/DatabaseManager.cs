@@ -42,7 +42,6 @@ namespace CompasXR.Core
         public Dictionary<string, Node> QRCodeDataDict { get; set; }
     }
 
-    //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
     public class JointsDataDictEventArgs : EventArgs
     {
         /*
@@ -51,7 +50,6 @@ namespace CompasXR.Core
         */
         public Dictionary<string, Data.Joint> JointsDataDict { get; set; }
     }
-    //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
 
 
     public class UpdateDataItemsDictEventArgs : EventArgs
@@ -106,14 +104,12 @@ namespace CompasXR.Core
         public BuildingPlanData BuildingPlanDataItem { get; private set; } = new BuildingPlanData();
         public Dictionary<string, Node> QRCodeDataDict { get; private set; } = new Dictionary<string, Node>();
 
-        //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
         public Dictionary<string, Data.Joint> JointsDataDict { get; private set; } = new Dictionary<string, Data.Joint>();
         DatabaseReference dbReferenceJoints;
 
         public delegate void JointsDataDictEventHandler(object source, JointsDataDictEventArgs e); 
         public event JointsDataDictEventHandler JointsDataDictReceived;
 
-        //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
 
         public Dictionary<string, UserCurrentInfo> UserCurrentStepDict { get; private set; } = new Dictionary<string, UserCurrentInfo>();
 
@@ -136,7 +132,6 @@ namespace CompasXR.Core
         public delegate void UpdateUserInfoEventHandler(object source, UserInfoDataItemsDictEventArgs e);
         public event UpdateUserInfoEventHandler UserInfoUpdate;
 
-        //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
         float StartUpTimeStamp;
 
         //Other Scripts
@@ -177,7 +172,6 @@ namespace CompasXR.Core
             * Method is used to initialize the DatabaseManager class on Awake.
             * It is used to find dependencies and set data persistence.
             */
-            //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
             StartUpTimeStamp = Time.time;
 
             FirebaseDatabase.DefaultInstance.SetPersistenceEnabled(false);
@@ -204,7 +198,6 @@ namespace CompasXR.Core
             });
         }
 
-        //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
         public async void FetchData(object source, ApplicationSettingsEventArgs e)
         {
             /*
@@ -219,7 +212,6 @@ namespace CompasXR.Core
             dbReferenceQRCodes = FirebaseDatabase.DefaultInstance.GetReference(e.Settings.project_name).Child("QRFrames").Child("graph").Child("node");
             dbReferenceUsersCurrentSteps = FirebaseDatabase.DefaultInstance.GetReference(e.Settings.project_name).Child("UsersCurrentStep");
 
-            //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
             dbReferenceJoints = FirebaseDatabase.DefaultInstance.GetReference(e.Settings.project_name).Child("joints");
 
             if (e.Settings.storage_folder == "None")
@@ -284,7 +276,6 @@ namespace CompasXR.Core
             }
         }      
 
-        //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
 
         public void PushAllDataBuildingPlan(string key)
         {        
@@ -351,7 +342,6 @@ namespace CompasXR.Core
             Debug.Log($"DeserializeAssemblyDataSnapshot: The number of nodes stored in the Assembly Dict is {dataDict.Count}");
         }
 
-        //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
         private void DeserializeJointDataSnapshot(DataSnapshot snapshot, Dictionary<string, Data.Joint> dataDict)
         {
             /*
@@ -378,7 +368,6 @@ namespace CompasXR.Core
             Debug.Log($"DeserializeAssemblyDataSnapshot: The number of Joints stored in Dict is {dataDict.Count}");
         }
 
-        //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
 
         private void DesearializeStringItem(DataSnapshot snapshot, ref string tempStringStorage)
         {  
@@ -892,7 +881,6 @@ namespace CompasXR.Core
 
         }
         
-        //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
         bool IsWithinTimeWindow(float currentTime, float startTime, float timeWindow)
         {
             /*
@@ -921,7 +909,6 @@ namespace CompasXR.Core
                 return;
             }
 
-            //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
             if (IsWithinTimeWindow(Time.time, StartUpTimeStamp, 3.0f))
             {
                 Debug.Log($"OnProjectInfoChangedUpdate: Time Window is still open. Ignoring the child change on Key {args.Snapshot.Key}.");
@@ -1005,7 +992,6 @@ namespace CompasXR.Core
             TrackingDictReceived(this, new TrackingDataDictEventArgs() {QRCodeDataDict = QRCodeDataDict});
         }
 
-        //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
         protected virtual void OnJointsDataDictReceived(Dictionary<string, Data.Joint> inputJointsDataDict)
         {
             /*
@@ -1017,7 +1003,6 @@ namespace CompasXR.Core
             JointsDataDictReceived(this, new JointsDataDictEventArgs() {JointsDataDict = inputJointsDataDict});
         }
 
-        //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
         protected virtual void OnDatabaseUpdate(Step newValue, string key)
         {
             /*

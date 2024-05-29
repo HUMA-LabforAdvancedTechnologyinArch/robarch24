@@ -577,7 +577,6 @@ namespace CompasXR.Core.Data
 
     }
 
-    //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
     [System.Serializable]
     public class Data
     {
@@ -736,7 +735,6 @@ namespace CompasXR.Core.Data
             return element;
         }
     }
-    //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
 
     ////////////////Classes for User Current Informatoin/////////////////////
     

@@ -30,7 +30,6 @@ namespace CompasXR.Core
         private GameObject ActiveRobotObjects;
         private GameObject BaseGeometryObject;
 
-        //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
         private GameObject JointsParent;
 
         //Public Scripts
@@ -66,7 +65,6 @@ namespace CompasXR.Core
             ActiveRobotObjects = GameObject.Find("ActiveRobotObjects");
             BaseGeometryObject = GameObject.Find("BaseGeometry");
 
-            //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
             JointsParent = GameObject.Find("Joints");
         }
         void Update()
@@ -106,7 +104,6 @@ namespace CompasXR.Core
                         ObjectTransformations.TranslateGameObjectByImageTarget(PriorityViewerObjects, qrObject, QRCodeDataDict[key].part.frame.point, QRCodeDataDict[key].part.frame.xaxis, QRCodeDataDict[key].part.frame.yaxis);
                         ObjectTransformations.TranslateGameObjectByImageTarget(ActiveRobotObjects, qrObject, QRCodeDataDict[key].part.frame.point, QRCodeDataDict[key].part.frame.xaxis, QRCodeDataDict[key].part.frame.yaxis);
 
-                        //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
                         ObjectTransformations.TranslateGameObjectByImageTarget(JointsParent, qrObject, QRCodeDataDict[key].part.frame.point, QRCodeDataDict[key].part.frame.xaxis, QRCodeDataDict[key].part.frame.yaxis);
                         ObjectTransformations.TranslateGameObjectByImageTarget(BaseGeometryObject, qrObject, QRCodeDataDict[key].part.frame.point, QRCodeDataDict[key].part.frame.xaxis, QRCodeDataDict[key].part.frame.yaxis);
 

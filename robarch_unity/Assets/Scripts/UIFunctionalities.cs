@@ -110,7 +110,6 @@ namespace CompasXR.UI
         public GameObject CommunicationToggleObject;
         private GameObject CommunicationPanelObject;
 
-        //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
         public GameObject JointScaleToggleObject;
 
         //Editor Toggle Objects
@@ -158,7 +157,6 @@ namespace CompasXR.UI
         public Camera arCamera;
         private GameObject activeGameObject;
 
-        //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
         private GameObject activeJointGameObject;
 
         private GameObject temporaryObject; 
@@ -306,7 +304,6 @@ namespace CompasXR.UI
             ObjectLengthsText = ObjectLengthsUIPanelObjects.FindObject("LengthsText").GetComponent<TMP_Text>();
             ObjectLengthsTags = GameObject.Find("ObjectLengthsTags");
 
-            //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
             UserInterface.FindToggleandSetOnValueChangedAction(VisibilityMenuObject, ref JointsToggleObject, "JointsToggle", ToggleJoints);
         }
         private void SetMenuItemsOnStart()
@@ -326,7 +323,6 @@ namespace CompasXR.UI
             UserInterface.FindButtonandSetOnClickAction(EditorToggleObject, ref BuildStatusButtonObject, "Build_Status_Editor", TouchModifyBuildStatus);
             UserInterface.FindToggleandSetOnValueChangedAction(MenuButtonObject, ref CommunicationToggleObject, "Communication_Button", ToggleCommunication);
 
-            //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
             UserInterface.FindToggleandSetOnValueChangedAction(MenuButtonObject, ref JointScaleToggleObject, "JointZoomToggle", ToggleJointScale);
 
             //Find Panel Objects used for Info and communication
@@ -408,7 +404,6 @@ namespace CompasXR.UI
                     PriorityViewerToggleObject.SetActive(true);
                     ScrollSearchToggleObject.SetActive(true);
 
-                    //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
                     JointsToggleObject.SetActive(true);
 
                     UserInterface.SetUIObjectColor(VisibilityMenuObject, Yellow);
@@ -424,7 +419,6 @@ namespace CompasXR.UI
                     PriorityViewerToggleObject.SetActive(false);
                     ScrollSearchToggleObject.SetActive(false);
 
-                    //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
                     JointsToggleObject.SetActive(false);
                     
                     
@@ -451,7 +445,6 @@ namespace CompasXR.UI
                     CommunicationToggleObject.SetActive(true);
                     EditorToggleObject.SetActive(true);
                     
-                    //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
                     JointScaleToggleObject.SetActive(true);
 
                     UserInterface.SetUIObjectColor(MenuButtonObject, Yellow);
@@ -470,7 +463,6 @@ namespace CompasXR.UI
                     }
 
                     
-                    //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
                     JointScaleToggleObject.SetActive(false);
                     if(JointScaleToggleObject.GetComponent<Toggle>().isOn){
                         JointScaleToggleObject.GetComponent<Toggle>().isOn = false;
@@ -632,7 +624,6 @@ namespace CompasXR.UI
                 }
             }
 
-            //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
             if(JointsToggleObject.GetComponent<Toggle>().isOn)
             {
                 instantiateObjects.SetAllJointsVisibilityFromAdjacency();
@@ -779,7 +770,6 @@ namespace CompasXR.UI
                 }
                 databaseManager.PushAllDataBuildingPlan(key);
 
-                //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
                 instantiateObjects.ColorAllJointsByBuildState();
             }
             else
@@ -1081,7 +1071,6 @@ namespace CompasXR.UI
             }
             else
             {    
-                //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
                 string robotName = databaseManager.BuildingPlanDataItem.steps[CurrentStep].data.robot_name;
 
                 string topicToPublishOn;
@@ -1118,8 +1107,7 @@ namespace CompasXR.UI
             Debug.Log($"ApproveTrajectoryButtonMethod: Approving Trajectory for Step {CurrentStep}");
             TrajectoryServicesUIControler(false, false, true, false, false, false);
             
-            //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
-            string robotName = databaseManager.BuildingPlanDataItem.steps[CurrentStep].data.robot_name; //TODO: Could be also mqttTrajectoryManager.serviceManager.LastGetTrajectoryRequest.elementID (instead of CurrentStep if error occurs)
+            string robotName = databaseManager.BuildingPlanDataItem.steps[CurrentStep].data.robot_name;
             mqttTrajectoryManager.PublishToTopic(mqttTrajectoryManager.compasXRTopics.publishers.approveTrajectoryTopic, new ApproveTrajectory(CurrentStep, robotName, mqttTrajectoryManager.serviceManager.CurrentTrajectory, 1).GetData());
         }
         public void RejectTrajectoryButtonMethod()
@@ -1130,8 +1118,7 @@ namespace CompasXR.UI
             * set UI elements and publish the rejection on the particular approval topic.
             */
             Debug.Log($"RejectTrajectoryButtonMethod: Rejecting Trajectory for Step {CurrentStep}");
-            //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
-            string robotName = databaseManager.BuildingPlanDataItem.steps[CurrentStep].data.robot_name; //TODO: Could be also mqttTrajectoryManager.serviceManager.LastGetTrajectoryRequest.elementID (instead of CurrentStep if error occurs)
+            string robotName = databaseManager.BuildingPlanDataItem.steps[CurrentStep].data.robot_name;
             mqttTrajectoryManager.PublishToTopic(mqttTrajectoryManager.compasXRTopics.publishers.approveTrajectoryTopic, new ApproveTrajectory(CurrentStep, robotName, mqttTrajectoryManager.serviceManager.CurrentTrajectory, 0).GetData());
             TrajectoryServicesUIControler(false, false, true, false, false, false);
         }
@@ -1165,8 +1152,7 @@ namespace CompasXR.UI
             * Method is used to execute a trajectory for the current step.
             * It sets UI elements and publish the execution on the particular approval topic to the CAD.
             */
-            //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
-            string robotName = databaseManager.BuildingPlanDataItem.steps[CurrentStep].data.robot_name; //TODO: Could be also mqttTrajectoryManager.serviceManager.LastGetTrajectoryRequest.elementID (instead of CurrentStep if error occurs)
+            string robotName = databaseManager.BuildingPlanDataItem.steps[CurrentStep].data.robot_name;
             string topicToPublishOn;
             if(robotName == "AA")
             {
@@ -1343,7 +1329,6 @@ namespace CompasXR.UI
             ObjectLengthsText.text = $"P1 | {(float)Math.Round(P1distance, 2)}     P2 | {(float)Math.Round(P2distance, 2)}";
         }
 
-        //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
         public void SetObjectLengthsTextFromStoredKey(string key)
         {
             /*
@@ -1355,7 +1340,6 @@ namespace CompasXR.UI
             ObjectLengthsText.text = $"P1 | {p1Distance}     P2 | {p2Distance}";
         }
 
-        //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
         public void ToggleRobot(Toggle toggle)
         {
             /*
@@ -1407,7 +1391,6 @@ namespace CompasXR.UI
             }
         }
 
-        //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
         public void SetActiveRobotTextFromKey(string key)
         {
             /*
@@ -1487,7 +1470,6 @@ namespace CompasXR.UI
             }
         }
 
-        //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
         public void SetRequestUIFromKey(string key)
         {
             /*
@@ -1750,10 +1732,8 @@ namespace CompasXR.UI
             */
             Debug.Log("ReloadApplication: Attempting to reload all information from the database");
             databaseManager.RemoveListners();
-            //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
             instantiateObjects.DestroyAllJoints();     
             databaseManager.JointsDataDict.Clear();
-            //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
 
             if (Elements.transform.childCount > 0)
             {
@@ -1814,8 +1794,6 @@ namespace CompasXR.UI
                     {
                         JointScaleToggleObject.GetComponent<Toggle>().isOn = false;
                     }
-
-                    //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
                     ControlAllCollidersInChildren(instantiateObjects.Joints, false);
 
                     TouchSearchModeController(TouchMode.ElementEditSelection);
@@ -1829,7 +1807,6 @@ namespace CompasXR.UI
                     EditorSelectedTextObject.SetActive(false);
                     CurrentStepTextObject.SetActive(true);
 
-                    //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
                     ControlAllCollidersInChildren(instantiateObjects.Joints, true);
 
                     TouchSearchModeController(TouchMode.None);
@@ -1859,7 +1836,6 @@ namespace CompasXR.UI
             }
         }
 
-        //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
         public void ToggleJointScale(Toggle toggle)
         {
             /*
@@ -1946,7 +1922,6 @@ namespace CompasXR.UI
                 Debug.Log ("***TouchMode: ELEMENT EDIT MODE***");
             }
 
-            //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
             else if(modetype == TouchMode.JointSelection)
             {
                 Debug.Log ("***TouchMode: JOINT SELECTION MODE***");
@@ -1974,7 +1949,6 @@ namespace CompasXR.UI
 
         }
 
-        //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
         public void ControlAllCollidersInChildren(GameObject parent, bool enable)
         {
             /*
@@ -2294,7 +2268,6 @@ namespace CompasXR.UI
             }
         }
 
-        //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
         private void JointSelectionModeActivation()
         {
             /*

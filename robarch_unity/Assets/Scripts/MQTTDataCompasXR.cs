@@ -53,7 +53,6 @@ namespace CompasXR.Robots.MqttData
         }
     }
 
-    //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
     [System.Serializable]
     public class Publishers
     {
@@ -87,7 +86,6 @@ namespace CompasXR.Robots.MqttData
 
     }
 
-    //TODO: Extended for RobArch2024/////////////////////////////////////////////////////////////////////////////////
     [System.Serializable]
     public class Subscribers
     {
