@@ -232,7 +232,8 @@ conda.recipe/
 # all files in Firebase Plugins folder 
 **/Assets/Firebase/Plugins/**/*
 
-
+# Ignore all .tgz files
+*.tgz
 
 #--------------------------------------------------------------------------------
 
