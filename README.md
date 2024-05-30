@@ -79,6 +79,7 @@ Path for package:
 `...\robarch24\robarch_unity\Packages\com.ptc.vuforia.engine-10.18.4.tgz`  
 
 Note: If you do not have a Vuforia account you will be reqired to make a free developer acount.
+
 Note: You may need to replace the license information within the unity file with your license information.
     
 🚀 You're ready! 
