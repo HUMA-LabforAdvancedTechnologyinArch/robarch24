@@ -64,6 +64,20 @@ Install Rhino dependencies:
 
     (robarch24) python -m compas_rhino.install -v 7.0
 
+
+RobArch Unity Application:
+
+If you desire to run the unity file located in unity `robarch_unity`
+
+It is required that you download and place the vuforia library from
+the link below, and place the `.tgz` package in the path listed below.
+
+Vuforia Package Download:
+[Vuforia Package](https://www.anaconda.com/products/individual)
+
+Path for package:
+    ...\robarch24\robarch_unity\Packages\com.ptc.vuforia.engine-10.18.4.tgz  
+
     
 🚀 You're ready! 
 
